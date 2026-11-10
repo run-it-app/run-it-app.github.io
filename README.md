@@ -11,3 +11,4 @@ Web pages for **Run It**:
   - `404.html` sends reloads of its inner pages back to it.
   - It's kept out of search engines.
 - `.nojekyll`: so Pages serves `_expo/` as it is.
+- `/media/run-it-beta.mp4`: the 9:16 beta video, with a poster frame. It's made by `marketing/build-video.sh` in the app repo.
