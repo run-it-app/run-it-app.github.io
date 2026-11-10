@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet"><link rel="icon" href="/icon.png"><link rel="stylesheet" href="/style.css">
+<title>Run It workout</title>
+<meta property="og:title" content="A Run It workout"><meta property="og:description" content="Open it in Run It to send it to your Garmin watch."><meta property="og:image" content="https://run-it-app.github.io/icon.png">
+</head><body><main>
+<img class="logo" src="/icon.png" alt="" style="width:72px;height:72px">
+<div class="eyebrow" style="margin-top:16px" id="from">Shared workout</div>
+<h1 id="name" style="font-size:42px">RUN IT WORKOUT</h1>
+<div class="card"><pre id="text" dir="auto">This link doesn't contain a workout.</pre></div>
+<a class="btn" id="open" href="#">OPEN IN RUN IT</a>
+<a class="btn ghost" id="web" href="/app/">OPEN ON IPHONE</a>
+<button class="btn ghost" id="copy">COPY WORKOUT TEXT</button>
+<p style="margin-top:20px">Android: “Open in Run It” opens the app. iPhone: “Open on iPhone” opens the web version (in Safari: Share → Add to Home Screen). Don't have Run It yet? It's invite only: ask whoever sent you this link.</p>
+<footer>© 2026 Run It · <a href="/">About Run It</a> · <a href="/privacy/">Privacy</a></footer>
+</main>
+<script>
+  // Link format: /w/#<base64url(JSON {t: text, n?: name, f?: sender})>. The part after
+  // "#" never reaches the server. Run It handles the same data at runit://share#<same>.
+  function show() {
+    var raw = location.hash.slice(1);
+    if (!raw) return;
+    try {
+      var b64 = raw.replace(/-/g, '+').replace(/_/g, '/');
+      var bin = atob(b64 + '==='.slice((b64.length + 3) % 4));
+      var json = JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, function (c) { return c.charCodeAt(0); })));
+      var text = document.getElementById('text');
+      text.textContent = json.t || '';
+      text.dir = /[\u0590-\u05FF]/.test(json.t || '') ? 'rtl' : 'ltr';
+      if (json.n) document.getElementById('name').textContent = json.n;
+      if (json.f) document.getElementById('from').textContent = 'Shared by ' + json.f;
+      document.getElementById('open').href = 'runit://share#' + raw;
+      document.getElementById('web').href = '/app/?share#' + raw;
+      document.getElementById('copy').onclick = function () {
+        navigator.clipboard.writeText(json.t || '').then(function () {
+          document.getElementById('copy').textContent = 'COPIED ✓';
+        });
+      };
+    } catch (e) {
+      document.getElementById('text').textContent = "This link looks damaged. Ask for it to be shared again.";
+    }
+  }
+  show();
+  if (/iPhone|iPad|iPod/.test(navigator.userAgent)) document.getElementById('open').style.display = 'none';
+  window.addEventListener('hashchange', show);
+</script>
+</body></html>
