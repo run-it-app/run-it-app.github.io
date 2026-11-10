@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/icon.png"><link rel="stylesheet" href="/style.css">
+<title>Run It quick start</title>
+<meta name="description" content="Install Run It, connect Intervals.icu and Garmin, and write your first workout.">
+<style>
+  .ex { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 14px; align-items: start; }
+  .ex pre { background: #15191E; border-radius: 12px; padding: 12px 14px; font-size: 16px; text-align: right; }
+  /* One block per line, each taking its own direction: a line of only numbers stays left-to-right. */
+  .ex pre span { display: block; }
+  .ex pre.ltr { direction: ltr; text-align: left; }
+  .ex p { font-size: 14px; margin: 0; }
+  .ex + .ex { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .step { display: flex; gap: 14px; margin-top: 14px; }
+  .n { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--bg); font: 700 18px 'Barlow Condensed', sans-serif; display: flex; align-items: center; justify-content: center; }
+  .step p { margin: 3px 0 0; }
+  b, strong { color: var(--text); font-weight: 600; }
+  code { font-family: Inter, sans-serif; background: #15191E; border-radius: 6px; padding: 1px 6px; color: var(--text); unicode-bidi: isolate; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .two .card { margin-top: 0; }
+  .note { font-size: 14px; color: var(--muted); }
+  .top { display: flex; align-items: center; gap: 16px; }
+  .top .logo { width: 64px; height: 64px; }
+  .pdf { margin-left: auto; font: 700 15px 'Barlow Condensed', sans-serif; letter-spacing: .1em; text-decoration: none; border: 1px solid #2A3038; border-radius: 10px; padding: 8px 12px; color: var(--text); }
+  @media (max-width: 520px) { .ex, .two { grid-template-columns: 1fr; } }
+  /* Printing / PDF: light, two A4 pages. */
+  @page { size: A4; margin: 14mm 14mm 12mm; }
+  @media print {
+    :root { --bg: #fff; --card: #fff; --line: #d9dde2; --text: #101418; --soft: #2b3138; --muted: #5d6670; --accent: #4E6618; }
+    body { background: #fff; font-size: 12px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    main { max-width: none; padding: 0; }
+    h1 { font-size: 36px; margin: 4px 0 4px; } h2 { font-size: 16px; margin: 10px 0 3px; }
+    .top .logo { width: 44px; height: 44px; }
+    p, li { font-size: 11.5px; line-height: 1.4; }
+    .card { padding: 8px 12px; margin-top: 6px; border-radius: 10px; }
+    .ex, .step, .two .card { break-inside: avoid; }
+    .ex pre, code { background: #f1f3f5; color: #101418; }
+    .ex p { font-size: 11.5px; }
+    .ex pre { font-size: 12px; padding: 6px 10px; line-height: 1.35; }
+    .ex + .ex { margin-top: 6px; padding-top: 6px; }
+    .step { margin-top: 5px; }
+    .n { background: #101418; color: #fff; width: 24px; height: 24px; font-size: 15px; }
+    .step { margin-top: 8px; }
+    .pdf, .noprint { display: none; }
+    footer { margin-top: 14px; }
+  }
+</style>
+</head><body><main>
+<div class="top"><img class="logo" src="/icon.png" alt=""><div><div class="eyebrow">Free beta · Invite only · Android &amp; iPhone</div></div><a class="pdf" href="/start/run-it-quick-start.pdf">PDF ↓</a></div>
+<h1>RUN IT QUICK START</h1>
+<p>Write your workout the way you'd text it — in Hebrew or English — and it lands on your Garmin watch, structured, with every pace on screen. Run It sends it to your free Intervals.icu calendar, which syncs planned workouts to Garmin Connect and your watch.</p>
+
+<h2>1 · Once, before you start</h2>
+<div class="card">
+  <div class="step"><div class="n">1</div><div><p><b>Free Intervals.icu account</b> at <a href="https://intervals.icu">intervals.icu</a>.</p></div></div>
+  <div class="step"><div class="n">2</div><div><p><b>Link Garmin:</b> Intervals.icu → Settings → Connections → Garmin Connect, and tick <b>Upload planned workouts</b>.</p></div></div>
+  <p class="note" style="margin-top:12px">Planned workouts reach the watch up to about 7 days ahead, the next time it syncs with Garmin Connect.</p>
+</div>
+
+<h2>2 · Install</h2>
+<p>Run It is <b>invite only</b>. Your invite message has the Android link, the iPhone address and your <b>invite code</b>.</p>
+<div class="two">
+  <div class="card"><p><b>Android</b></p><p>Install the app from the link in your invite message (ask whoever invited you). Updates then arrive by themselves.</p></div>
+  <div class="card"><p><b>iPhone</b></p><p>Open <a href="/app/">run-it-app.github.io/app</a> in <b>Safari</b> → Share → <b>Add to Home Screen</b>.</p></div>
+</div>
+
+<h2>3 · Set up (one minute)</h2>
+<div class="card">
+  <div class="step"><div class="n">1</div><div><p><b>Invite code</b> — type the code from your invite message (capitals and dashes don't matter).</p></div></div>
+  <div class="step"><div class="n">2</div><div><p><b>Connect with Intervals.icu</b>, sign in and tap Allow. (Or paste an API key: Intervals.icu → Settings → Developer Settings.)</p></div></div>
+  <div class="step"><div class="n">3</div><div><p><b>Garmin check</b> — Run It shows whether Garmin is linked and planned uploads are on.</p></div></div>
+  <div class="step"><div class="n">4</div><div><p><b>Your defaults</b> — warm-up, cool-down, the jog between reps, strides. Used when you don't write them; change any time in Settings.</p></div></div>
+</div>
+
+<h2>4 · Write a workout</h2>
+<p>Type, check the preview, tap <b>Send to watch</b>. One line per part; a first line with just a number is the day's total.</p>
+<div class="card">
+  <div class="ex"><pre class="ltr"><span dir="auto">8*1000@4:15</span></pre><p>8 × 1 km at 4:15, a 300 m jog between reps.</p></div>
+  <div class="ex"><pre><span dir="auto">חימום</span><span dir="auto">2*800@4:15</span><span dir="auto">10*400@4:10</span><span dir="auto">שחרור</span></pre><p>4 km warm-up · 2 × 800 m at 4:15 · 10 × 400 m at 4:10 (jogs between) · 2 km cool-down.</p></div>
+  <div class="ex"><pre><span dir="auto">36</span><span dir="auto">פעמיים 10 קמ על 4:35</span></pre><p>A 36 km day: 4 km warm-up · 10 km at 4:35 · 10 km easy · 10 km at 4:35 · 2 km cool-down.</p></div>
+  <div class="ex"><pre><span dir="auto">31 ק״מ</span><span dir="auto">3 סטים של 4 ק״מ</span><span dir="auto">1. 4:45</span><span dir="auto">2. 4:40</span><span dir="auto">3. 4:35</span></pre><p>A pace for each set, with easy running between, filling the 31 km.</p></div>
+  <div class="ex"><pre><span dir="auto">שעתיים קל</span><span dir="auto">4 ק״מ על קצב 5:00-4:40</span></pre><p>2 hours easy with the 4 km in the middle: 50:20 · 4 km · 50:20.</p></div>
+</div>
+<div class="card">
+  <p><b>Good to know</b></p>
+  <ul>
+    <li><b>Bare numbers:</b> 100 and up are metres (<code>2000</code>). Under 100 follow the day's total (km or minutes); with no total, under 10 is km and 10–99 is minutes. With <code>קל</code> it's always km (<code>12 קל</code> = 12 km).</li>
+    <li><b>Pace is a note, not a target:</b> the watch shows <code>Pace "4:15"</code> on each step; it won't beep at you.</li>
+    <li><b>AUTO lengths</b> (warm-up, cool-down, the jog between reps) can be tapped in the preview and changed.</li>
+    <li><b>Strides:</b> switch them on under the preview (default 4 × 120 m, after the warm-up).</li>
+    <li><b>Another day:</b> tap the date chip.</li>
+  </ul>
+</div>
+
+<div class="page2">
+<h2>5 · Write a week</h2>
+<p>Start each day with its name, in Hebrew or English. Run It switches to week mode by itself; pick the week (weeks start on Sunday) and send them all at once.</p>
+<div class="card">
+  <div class="ex"><pre><span dir="auto">ראשון 12 קל</span><span dir="auto">שלישי</span><span dir="auto">5 פעמים 1000 על 4:00</span><span dir="auto">חמישי</span><span dir="auto">15 קל</span><span dir="auto">להכניס סט של 3 פעמים:</span><span dir="auto">1 ק״מ על 4:45</span><span dir="auto">500 מ׳ על 5:30</span></pre><p>Three workouts for next week. Tap a day to check its steps, change its AUTO lengths or add strides for that day.</p></div>
+</div>
+
+<h2>6 · Your workouts</h2>
+<div class="card"><ul>
+  <li><b>Workouts</b> (top of the screen) shows the week and your history — including workouts made in Intervals.icu.</li>
+  <li>Tap one for its steps, or use <b>⋯</b> / long-press: <b>Edit</b>, <b>Repeat today</b>, <b>Delete</b>. <b>Delete this week</b> clears a whole week.</li>
+  <li>Deleting removes it from Intervals.icu. If it already reached your watch, delete it there too.</li>
+</ul></div>
+
+<h2>7 · Share with a friend</h2>
+<div class="card"><p>Tap <b>Share</b> to send a link. Your friend opens it in their Run It and sends it to their own watch. Friends without Run It need an invite first.</p></div>
+
+<h2>8 · If something doesn't read right</h2>
+<div class="card"><p>Run It never guesses: anything it can't read is highlighted and nothing is sent. Copy the text and send it to whoever invited you — every real example becomes a new rule.</p></div>
+
+<footer>© 2026 Run It. All rights reserved. Run It is an independent beta and isn't affiliated with or endorsed by Intervals.icu or Garmin. · <a href="/">About</a> · <a href="/privacy/">Privacy</a></footer>
+</div>
+</main></body></html>
