@@ -3,7 +3,8 @@
 <script>
   // The iPhone web app at /app/ is a single page. GitHub Pages has no rewrites, so a reload on one of
   // its inner pages (e.g. /app/workouts) lands here: send it back to the app.
-  if (location.pathname.indexOf('/app/') === 0) location.replace('/app/' + location.search + location.hash);
+  if (location.pathname.indexOf('/app-test/') === 0) location.replace('/app-test/' + location.search + location.hash);
+  else if (location.pathname.indexOf('/app/') === 0) location.replace('/app/' + location.search + location.hash);
   else location.replace('/');
 </script></head>
 <body><a href="/">Run It</a></body></html>
