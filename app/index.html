@@ -12,6 +12,14 @@
     <!-- Invite only: keep the app out of search engines. -->
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#0B0D10" />
+    <!-- Run It is dark only: say so, so browsers' own dark modes (Chrome auto dark, Samsung Internet)
+         leave its colours alone instead of recolouring a page they think is light. -->
+    <meta name="color-scheme" content="only dark" />
+    <style>
+      :root { color-scheme: only dark; }
+      html, body { background-color: #0B0D10; }
+      @media (prefers-color-scheme: dark) { :root { color-scheme: only dark; } }
+    </style>
     <link rel="apple-touch-icon" href="/app/apple-touch-icon.png" />
     <link rel="manifest" href="/app/manifest.json" />
     <title>Run It</title>
@@ -41,6 +49,6 @@
     <noscript> You need to enable JavaScript to run this app. </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/app/_expo/static/js/web/__expo-metro-runtime-ed4c1cfa6193d76fc294130e42bd1916.js" defer></script><script src="/app/_expo/static/js/web/__common-4be64293dd8d6bd75ecd0175cb82b304.js" defer></script><script src="/app/_expo/static/js/web/entry-af8a2a9b7bead8dd5d84c296c8d5619a.js" defer></script>
+  <script src="/app/_expo/static/js/web/__expo-metro-runtime-ed4c1cfa6193d76fc294130e42bd1916.js" defer></script><script src="/app/_expo/static/js/web/__common-d7aa0b5bf2ece7f55f185c3317a5fd54.js" defer></script><script src="/app/_expo/static/js/web/entry-af8a2a9b7bead8dd5d84c296c8d5619a.js" defer></script>
 </body>
 </html>
